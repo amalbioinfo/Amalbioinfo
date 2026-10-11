@@ -1,4 +1,4 @@
-## Hi there 👋
+## Hi I’m Amal 👋 
 🎓 Master’s Student in Biochemistry
 🧬 Interested in Genomics, Bioinformatics, and Computational Biology
 💻 Currently Exploring Programming and Technology
