@@ -1,5 +1,11 @@
 ## Hi there 👋
-
+🎓 Master’s Student in Biochemistry
+🧬 Interested in Genomics, Bioinformatics, and Computational Biology
+💻 Currently Exploring Programming and Technology
+📊 Familiar with SPSS and basic data analysis
+🔬 Exploring scientific tools such as PyMOL and Galaxy
+🌱 Currently developing my technical skills through the NewTech Bootcamp
+🚀 Excited to learn, collaborate, and build new projects!
 <!--
 **amalbioinfo/Amalbioinfo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
