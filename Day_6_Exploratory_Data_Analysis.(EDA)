@@ -1,0 +1,466 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNSo4MzHKBPGCB4y2SQ3bat",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/amalbioinfo/Amalbioinfo/blob/main/Day_6_Exploratory_Data_Analysis.(EDA)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"1234\")\n",
+        "1234"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j6tvdxVJjAVv",
+        "outputId": "25beec57-61c4-4cd7-9d31-1e2cb7dea0f1"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1234\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1234"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "p2wYOikiF1ra",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0d0bcbe3-57e8-4fb1-a337-89ed22e10f71"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ],
+      "source": [
+        "name=\"Amal\"\n",
+        "print(len(name))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=12\n",
+        "n=\"11\"\n",
+        "\n",
+        "print(type(num))\n",
+        "\n",
+        "print(type(n))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jnD5E8N_j065",
+        "outputId": "affdd79e-6439-4f30-9569-1cfecd7e185f"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install biopython"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "li5jURwJj1Xa",
+        "outputId": "d1a1998b-77a4-4674-bec1-5932e03874aa"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Collecting biopython\n",
+            "  Downloading biopython-1.88-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)\n",
+            "Requirement already satisfied: numpy in /usr/local/lib/python3.13/dist-packages (from biopython) (2.1.3)\n",
+            "Downloading biopython-1.88-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)\n",
+            "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m3.2/3.2 MB\u001b[0m \u001b[31m52.2 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+            "\u001b[?25hInstalling collected packages: biopython\n",
+            "Successfully installed biopython-1.88\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from Bio.Seq import Seq\n",
+        "dna = Seq(\"ATGCGATCGTAG\")\n",
+        "print(dna)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y5Q-zCUHlNoK",
+        "outputId": "89f4f63f-e734-4565-b475-11a9bbc90b88"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ATGCGATCGTAG\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from Bio.Seq import Seq\n",
+        "dna = Seq(\"ATGCGATCGTAG\")\n",
+        "print(type(dna))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mDktf3s6lN49",
+        "outputId": "2659296b-2aa8-4f90-c379-f24d4da1e5f1"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'Bio.Seq.Seq'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"DNA length:\", len(dna))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rfUhNW3VlOHi",
+        "outputId": "d38d52fb-78cc-4abd-d369-68b722b4d4b3"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "DNA length: 12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dna2=\"ATTG\"\n",
+        "print(\"DNA length:\", len(dna))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "New-eiq-lOWL",
+        "outputId": "ff4dc6f9-560b-496e-9af2-8c83561fe95e"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "DNA length: 12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dna3 = dna.complement()\n",
+        "print(\"Complement:\", dna3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XM-gCncTmrl8",
+        "outputId": "701a10bd-606a-42db-c9c5-3415516fbd72"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Complement: TACGCTAGCATC\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dna3 = Seq(\"AAAA\")\n",
+        "print(\"Complement:\", dna3.complement())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q_jKVON1m8L-",
+        "outputId": "79edbb47-7ec0-4faf-fe78-5f40fa9eb788"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Complement: TTTT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dna3 = Seq(\"AAAA\")\n",
+        "dna5 = Seq(\"GCTA\")\n",
+        "print(\"Complement:\", dna5.complement())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rxx5OMsCnapf",
+        "outputId": "4d15c0fd-0071-4cc5-89bb-9b59892624cb"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Complement: CGAT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "r=Seq(\"ATTG\")\n",
+        "#TAAC\n",
+        "print(r, r.complement())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fS-So5--ntPI",
+        "outputId": "6ee6c6d2-8a6a-4023-cbf1-75bf4ef2f957"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ATTG TAAC\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t=Seq(\"TAGC\")\n",
+        "print(\"RNA:\", t.transcribe())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rwBEPe7fnb9_",
+        "outputId": "de482f61-dc47-487f-b355-d8a5801b5e58"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "RNA: UAGC\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "q=Seq(\"TTTTT\")\n",
+        "print(q.transcribe())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tG7xuuZkncEx",
+        "outputId": "33641e81-3d18-4eac-88a9-b44275d633ab"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "UUUUU\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p=Seq(\"ATTG\")\n",
+        "print(p.transcribe())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5mwczU-Ypgf1",
+        "outputId": "e142bce8-a7b1-482d-9299-687164774d7f"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "AUUG\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p=Seq(\"ATTG\")\n",
+        "print(p.transcribe())\n",
+        "print(p.reverse_complement())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2eLqI2WMqFzJ",
+        "outputId": "6fd117d5-1317-4e60-b792-13e98ef3dbfb"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "AUUG\n",
+            "CAAT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "2K-TJ7Tkph9L"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "NteWw2s7piGs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RzxLmzhlpiMd"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
